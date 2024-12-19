@@ -6,15 +6,14 @@ import bcrypt from 'bcrypt';
 
 export const login = async (req: Request, res: Response) => {
   // TODO: If the user exists and the password is correct, return a JWT token
+  const { username, password } = req.body;
   try {
-    const { username, password } = req.body;
-
-  const user = await User.findOne({
-    where: { username },
+    const user = await User.findOne({
+      where: { username },
   });
 
   if (!user) {
-    return res.status(401).json({ message: 'Authentication failed' });
+    return res.status(401).json({ message: 'Invalid username or password.' });
   }
 
   const passwordIsValid = await bcrypt.compare(password, user.password);
