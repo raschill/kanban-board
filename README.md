@@ -6,6 +6,9 @@
 
  A Kanban Board application for sorting tasks into various levels of priority/completeness.
 
+ ## Deployed Website
+ [Visit this link!](https://kanban-board1-wb3p.onrender.com/)
+
 ## Mock-Up
 
 The following images show the web application's appearance and functionality:
@@ -36,8 +39,12 @@ Use npm install to set up the necessary dependencies:
 - You will need to use 'npm i' without the quotes.
 
 Run it:
-- Type npm run dev
+- Type npm run seed
+- Type npm run start
 
+## OR
+
+Just visit the website linked above.
 
  ## License
 
